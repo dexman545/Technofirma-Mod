@@ -91,7 +91,7 @@ public class MagicAnvilNEIHandler extends TemplateRecipeHandler
             for (MagicAnvilRecipe recipe : recipeList) arecipes.add(new CachedAnvilRecipe(HAMMER_NORMAL, recipe));
             for (MagicAnvilRecipe recipe : weldRecipeList) arecipes.add(new CachedAnvilRecipe(HAMMER_WELD, recipe));
         }
-        else if (ingredient.getItem() == TFCItems.Powder && ingredient.getItemDamage() == 0)
+        else if (ingredient.getItem() == TFCItems.powder && ingredient.getItemDamage() == 0)
         {
             for (MagicAnvilRecipe recipe : weldRecipeList) arecipes.add(new CachedAnvilRecipe(WELD, recipe));
         }
@@ -119,9 +119,9 @@ public class MagicAnvilNEIHandler extends TemplateRecipeHandler
             recipeList = MagicAnvilManager.getInstance().getRecipeList();
             weldRecipeList = MagicAnvilManager.getInstance().getWeldRecipeList();
 
-            hammers = new ItemStack[Recipes.Hammers.length];
+            hammers = new ItemStack[Recipes.hammers.length];
             for (int i = 0; i < hammers.length; i++)
-                hammers[i] = new ItemStack(Recipes.Hammers[i]);
+                hammers[i] = new ItemStack(Recipes.hammers[i]);
             
             wands = new ItemStack[] { ItemApi.getItem("itemWandCasting", 0), ItemApi.getItem("itemWandCasting", 1), ItemApi.getItem("itemWandCasting", 2) };
         }
@@ -210,7 +210,7 @@ public class MagicAnvilNEIHandler extends TemplateRecipeHandler
 
             stacks.add(new PositionedStack(hammers, -14, 100, false));
             stacks.add(new PositionedStack(wands, 17, 90, false));
-            if (type.isWeld()) stacks.add(new PositionedStack(new ItemStack(TFCItems.Powder), 164, 100));
+            if (type.isWeld()) stacks.add(new PositionedStack(new ItemStack(TFCItems.powder), 164, 100));
             return stacks;
         }
     }

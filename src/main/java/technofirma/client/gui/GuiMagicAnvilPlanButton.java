@@ -40,7 +40,7 @@ public class GuiMagicAnvilPlanButton extends GuiButton
 			if(!screen.anvilTE.craftingPlan.equals("") && screen.anvilTE.workRecipe != null) 
 				renderInventorySlot(screen.anvilTE.workRecipe.getCraftingResult(),this.xPosition+1, this.yPosition+1);
 			else
-				renderInventorySlot(new ItemStack(TFCItems.Blueprint),this.xPosition+1, this.yPosition+1);
+				renderInventorySlot(new ItemStack(TFCItems.blueprint),this.xPosition+1, this.yPosition+1);
 
 			this.zLevel = 0;
 			this.mouseDragged(mc, x, y);

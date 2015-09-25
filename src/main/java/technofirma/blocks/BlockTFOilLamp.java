@@ -52,7 +52,7 @@ public class BlockTFOilLamp extends BlockTerraContainer
 		setHardness(4.0F);
         setResistance(10.0F);
         setBlockBounds(0.25F, 0.125F, 0.25F, 0.75F, 0.75F, 0.75F);
-		this.setCreativeTab(TFCTabs.TFCDecoration);
+		this.setCreativeTab(TFCTabs.TFC_DECORATION);
 		setStepSound(Block.soundTypeMetal);
 		setLightLevel(0.9F);
 	}

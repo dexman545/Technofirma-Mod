@@ -129,7 +129,7 @@ public class TechnofirmaCore
 			HeatRaw ThaumicSteelRaw = new HeatRaw(0.35, 1540);
 			
 			// Create our ThaumicSteel material
-			ThaumicSteelMaterial = EnumHelper.addToolMaterial("ThaumicSteel", 3, TFCItems.SteelUses + 500, TFCItems.SteelEff, 200, 10);
+			ThaumicSteelMaterial = EnumHelper.addToolMaterial("ThaumicSteel", 3, TFCItems.steelUses + 500, TFCItems.steelEff, 200, 10);
 			
 			proxy.SetupMagicItems();
 			
@@ -184,7 +184,7 @@ public class TechnofirmaCore
 		if (FoundThaumcraft)
 		{
 			Item[] newaxes = new Item[] { ThaumicSteelAxe };
-			System.arraycopy(newaxes, 0, Recipes.Axes, Recipes.Axes.length - 1, newaxes.length);
+			System.arraycopy(newaxes, 0, Recipes.axes, Recipes.axes.length - 1, newaxes.length);
 			
 			TechnofirmaCore.GetThaumcraftBlock("blockMagicalLog").setHardness(60);
 		}

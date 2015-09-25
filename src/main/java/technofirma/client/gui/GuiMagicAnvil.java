@@ -58,14 +58,14 @@ public class GuiMagicAnvil extends GuiContainerTFC
 		super.initGui();
 
 		buttonList.clear();
-		buttonList.add(new GuiMagicAnvilButton(7, guiLeft + 123, guiTop + 82, 16, 16, TFC_Textures.AnvilShrink, 208, 17, 16, 16, this, StatCollector.translateToLocal("gui.Anvil.Shrink")));
-		buttonList.add(new GuiMagicAnvilButton(6, guiLeft + 105, guiTop + 82, 16, 16, TFC_Textures.AnvilUpset, 208, 17, 16, 16, this, StatCollector.translateToLocal("gui.Anvil.Upset")));
-		buttonList.add(new GuiMagicAnvilButton(5, guiLeft + 123, guiTop + 64, 16, 16, TFC_Textures.AnvilBend, 208, 17, 16, 16, this, StatCollector.translateToLocal("gui.Anvil.Bend")));
-		buttonList.add(new GuiMagicAnvilButton(4, guiLeft + 105, guiTop + 64, 16, 16, TFC_Textures.AnvilPunch, 208, 17, 16, 16, this, StatCollector.translateToLocal("gui.Anvil.Punch")));
-		buttonList.add(new GuiMagicAnvilButton(3, guiLeft + 87, guiTop + 82, 16, 16, TFC_Textures.AnvilDraw, 208, 33, 16, 16, this, StatCollector.translateToLocal("gui.Anvil.Draw")));
-		buttonList.add(new GuiMagicAnvilButton(2, guiLeft + 69, guiTop + 82, 16, 16, TFC_Textures.AnvilHitHeavy, 208, 33, 16, 16, this, StatCollector.translateToLocal("gui.Anvil.HeavyHit")));
-		buttonList.add(new GuiMagicAnvilButton(1, guiLeft + 87, guiTop + 64, 16, 16, TFC_Textures.AnvilHitMedium, 208, 33, 16, 16, this, StatCollector.translateToLocal("gui.Anvil.MediumHit")));
-		buttonList.add(new GuiMagicAnvilButton(0, guiLeft + 69, guiTop + 64, 16, 16, TFC_Textures.AnvilHitLight, 208, 33, 16, 16, this, StatCollector.translateToLocal("gui.Anvil.LightHit")));
+		buttonList.add(new GuiMagicAnvilButton(7, guiLeft + 123, guiTop + 82, 16, 16, TFC_Textures.anvilShrink, 208, 17, 16, 16, this, StatCollector.translateToLocal("gui.Anvil.Shrink")));
+		buttonList.add(new GuiMagicAnvilButton(6, guiLeft + 105, guiTop + 82, 16, 16, TFC_Textures.anvilUpset, 208, 17, 16, 16, this, StatCollector.translateToLocal("gui.Anvil.Upset")));
+		buttonList.add(new GuiMagicAnvilButton(5, guiLeft + 123, guiTop + 64, 16, 16, TFC_Textures.anvilBend, 208, 17, 16, 16, this, StatCollector.translateToLocal("gui.Anvil.Bend")));
+		buttonList.add(new GuiMagicAnvilButton(4, guiLeft + 105, guiTop + 64, 16, 16, TFC_Textures.anvilPunch, 208, 17, 16, 16, this, StatCollector.translateToLocal("gui.Anvil.Punch")));
+		buttonList.add(new GuiMagicAnvilButton(3, guiLeft + 87, guiTop + 82, 16, 16, TFC_Textures.anvilDraw, 208, 33, 16, 16, this, StatCollector.translateToLocal("gui.Anvil.Draw")));
+		buttonList.add(new GuiMagicAnvilButton(2, guiLeft + 69, guiTop + 82, 16, 16, TFC_Textures.anvilHitHeavy, 208, 33, 16, 16, this, StatCollector.translateToLocal("gui.Anvil.HeavyHit")));
+		buttonList.add(new GuiMagicAnvilButton(1, guiLeft + 87, guiTop + 64, 16, 16, TFC_Textures.anvilHitMedium, 208, 33, 16, 16, this, StatCollector.translateToLocal("gui.Anvil.mediumHit")));
+		buttonList.add(new GuiMagicAnvilButton(0, guiLeft + 69, guiTop + 64, 16, 16, TFC_Textures.anvilHitLight, 208, 33, 16, 16, this, StatCollector.translateToLocal("gui.Anvil.lightHit")));
 		buttonList.add(new GuiButton(8, guiLeft + 13, guiTop + 53, 36, 20, StatCollector.translateToLocal("gui.Anvil.Weld")));
 		buttonList.add(new GuiMagicAnvilButton(9, guiLeft + 113, guiTop + 7, 19, 21, 208, 49, 19, 21, this, 2, TFCOptions.anvilRuleColor2[0], TFCOptions.anvilRuleColor2[1], TFCOptions.anvilRuleColor2[2]));
 		buttonList.add(new GuiMagicAnvilButton(10, guiLeft + 94, guiTop + 7, 19, 21, 208, 49, 19, 21, this, 1, TFCOptions.anvilRuleColor1[0], TFCOptions.anvilRuleColor1[1], TFCOptions.anvilRuleColor1[2]));
@@ -258,19 +258,19 @@ public class GuiMagicAnvil extends GuiContainerTFC
 		switch (Action)
 		{
 		case 0:
-			return TFC_Textures.AnvilHit;
+			return TFC_Textures.anvilHit;
 		case 1:
-			return TFC_Textures.AnvilDraw;
+			return TFC_Textures.anvilDraw;
 		case 3:
-			return TFC_Textures.AnvilPunch;
+			return TFC_Textures.anvilPunch;
 		case 4:
-			return TFC_Textures.AnvilBend;
+			return TFC_Textures.anvilBend;
 		case 5:
-			return TFC_Textures.AnvilUpset;
+			return TFC_Textures.anvilUpset;
 		case 6:
-			return TFC_Textures.AnvilShrink;
+			return TFC_Textures.anvilShrink;
 		default:
-			return TFC_Textures.InvisibleTexture;
+			return TFC_Textures.invisibleTexture;
 		}
 	}
 

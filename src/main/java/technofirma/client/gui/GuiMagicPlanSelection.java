@@ -31,8 +31,7 @@ public class GuiMagicPlanSelection extends GuiContainerTFC
 	World world;
 	ArrayList<Object[]> plans;
 	int x, y, z;
-	public static ResourceLocation texture = new ResourceLocation(Reference.ModID, Reference.AssetPathGui + "gui_plan.png");
-
+	public static ResourceLocation texture = new ResourceLocation(Reference.MOD_ID, Reference.ASSET_PATH_GUI + "gui_plan.png");
 	public GuiMagicPlanSelection(EntityPlayer p, TEMagicAnvil te, World w, int x, int y, int z)
 	{
 		super(new ContainerMagicPlanSelection(p, te, w, x, y, z), 176, 130);

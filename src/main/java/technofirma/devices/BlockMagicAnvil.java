@@ -32,7 +32,7 @@ public class BlockMagicAnvil  extends BlockTerraContainer
 	public BlockMagicAnvil()
 	{
 		super(Material.iron);
-		this.setCreativeTab(TFCTabs.TFCDevices);
+		this.setCreativeTab(TFCTabs.TFC_DEVICES);
 	}
 	
 	@Override

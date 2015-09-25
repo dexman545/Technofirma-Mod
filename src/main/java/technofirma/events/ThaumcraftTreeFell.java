@@ -37,9 +37,9 @@ public class ThaumcraftTreeFell
 			
 			boolean isAxeorSaw = false;
 			boolean isHammer = false;
-			for(int cnt = 0; cnt < Recipes.Axes.length && !isAxeorSaw; cnt++)
+			for(int cnt = 0; cnt < Recipes.axes.length && !isAxeorSaw; cnt++)
 			{
-				if(equip.getItem() == Recipes.Axes[cnt])
+				if(equip.getItem() == Recipes.axes[cnt])
 				{
 					isAxeorSaw = true;
 					if(cnt < 4)
@@ -47,9 +47,9 @@ public class ThaumcraftTreeFell
 				}
 			}
 			
-			for(int cnt = 0; cnt < Recipes.Hammers.length && !isAxeorSaw; cnt++)
+			for(int cnt = 0; cnt < Recipes.hammers.length && !isAxeorSaw; cnt++)
 			{
-				if(equip.getItem() == Recipes.Hammers[cnt])
+				if(equip.getItem() == Recipes.hammers[cnt])
 					isHammer = true;
 			}
 			
@@ -60,7 +60,7 @@ public class ThaumcraftTreeFell
 			}
 			else if(isHammer)
 			{
-				EntityItem item = new EntityItem(event.world, event.x + 0.5, event.y + 0.5, event.z + 0.5, new ItemStack(TFCItems.Stick, 1 + event.world.rand.nextInt(3)));
+				EntityItem item = new EntityItem(event.world, event.x + 0.5, event.y + 0.5, event.z + 0.5, new ItemStack(TFCItems.stick, 1 + event.world.rand.nextInt(3)));
 				event.world.spawnEntityInWorld(item);
 			}
 			else

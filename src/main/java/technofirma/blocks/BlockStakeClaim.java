@@ -17,7 +17,7 @@ public class BlockStakeClaim extends BlockTerraContainer
 	public BlockStakeClaim()
 	{
 		super(Material.wood);
-		this.setCreativeTab(TFCTabs.TFCDevices);
+		this.setCreativeTab(TFCTabs.TFC_DEVICES);
 	}
 	
 	@Override

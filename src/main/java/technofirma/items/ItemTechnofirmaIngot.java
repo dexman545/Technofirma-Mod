@@ -37,14 +37,14 @@ public class ItemTechnofirmaIngot extends ItemTerra implements ISmeltable
 	short metalAmount;
 	boolean smeltable = true;
 
-	public ItemTechnofirmaIngot()
+	public void ItemTechnofirmaIngot()
 	{
 		super();
-		setCreativeTab(TFCTabs.TFCMaterials);
+		setCreativeTab(TFCTabs.TFC_MATERIALS);
 		metalAmount = 100;
 	}
 
-	public ItemTechnofirmaIngot(boolean canSmelt)
+	public void ItemTechnofirmaIngot(boolean canSmelt)
 	{
 		this();
 		smeltable = canSmelt;
@@ -176,7 +176,7 @@ public class ItemTechnofirmaIngot extends ItemTerra implements ISmeltable
 			if(te != null)
 			{
 				te.storage[0] = new ItemStack(this,1,0);
-				te.setType(MetalRegistry.instance.getMetalFromItem(this).Name);
+				te.setType(MetalRegistry.instance.getMetalFromItem(this).name);
 
 				if(entityplayer.capabilities.isCreativeMode)
 				{

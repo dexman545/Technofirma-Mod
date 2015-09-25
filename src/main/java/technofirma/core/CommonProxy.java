@@ -83,11 +83,11 @@ public class CommonProxy
 		TechnofirmaCore.ThaumicSteel = new Metal("Thaumic Steel", TechnofirmaCore.ThaumicSteelUnshaped, TechnofirmaCore.ThaumicSteelIngot);
 	
 		// Setup magic tools
-		TechnofirmaCore.ThaumicSteelAxe = new ItemTechnofirmaAxe(TechnofirmaCore.ThaumicSteelMaterial, 250).SetIconTexture("thaumcraft:thaumiumaxe").setUnlocalizedName("Thaumic Steel Axe").setMaxDamage(TFCItems.SteelUses + 250);
-		TechnofirmaCore.ThaumicSteelShovel = new ItemTechnofirmaShovel(TechnofirmaCore.ThaumicSteelMaterial).SetIconTexture("thaumcraft:thaumiumshovel").setUnlocalizedName("Thaumic Steel Shovel").setMaxDamage(TFCItems.SteelUses + 250);
-		TechnofirmaCore.ThaumicSteelPickaxe = new ItemTechnofirmaPickaxe(TechnofirmaCore.ThaumicSteelMaterial).SetIconTexture("thaumcraft:thaumiumpick").setUnlocalizedName("Thaumic Steel Pickaxe").setMaxDamage(TFCItems.SteelUses + 250);
-		TechnofirmaCore.ThaumicSteelHoe = new ItemTechnofirmaHoe(TechnofirmaCore.ThaumicSteelMaterial).SetIconTexture("thaumcraft:thaumiumhoe").setUnlocalizedName("Thaumic Steel Hoe").setMaxDamage(TFCItems.SteelUses + 250);
-		TechnofirmaCore.ThaumicSteelSword = new ItemTechnofirmaSword(TechnofirmaCore.ThaumicSteelMaterial, 300).SetIconTexture("thaumcraft:thaumiumsword").setUnlocalizedName("Thaumic Steel Sword").setMaxDamage(TFCItems.SteelUses + 250);
+		TechnofirmaCore.ThaumicSteelAxe = new ItemTechnofirmaAxe(TechnofirmaCore.ThaumicSteelMaterial, 250).SetIconTexture("thaumcraft:thaumiumaxe").setUnlocalizedName("Thaumic Steel Axe").setMaxDamage(TFCItems.steelUses + 250);
+		TechnofirmaCore.ThaumicSteelShovel = new ItemTechnofirmaShovel(TechnofirmaCore.ThaumicSteelMaterial).SetIconTexture("thaumcraft:thaumiumshovel").setUnlocalizedName("Thaumic Steel Shovel").setMaxDamage(TFCItems.steelUses + 250);
+		TechnofirmaCore.ThaumicSteelPickaxe = new ItemTechnofirmaPickaxe(TechnofirmaCore.ThaumicSteelMaterial).SetIconTexture("thaumcraft:thaumiumpick").setUnlocalizedName("Thaumic Steel Pickaxe").setMaxDamage(TFCItems.steelUses + 250);
+		TechnofirmaCore.ThaumicSteelHoe = new ItemTechnofirmaHoe(TechnofirmaCore.ThaumicSteelMaterial).SetIconTexture("thaumcraft:thaumiumhoe").setUnlocalizedName("Thaumic Steel Hoe").setMaxDamage(TFCItems.steelUses + 250);
+		TechnofirmaCore.ThaumicSteelSword = new ItemTechnofirmaSword(TechnofirmaCore.ThaumicSteelMaterial, 300).SetIconTexture("thaumcraft:thaumiumsword").setUnlocalizedName("Thaumic Steel Sword").setMaxDamage(TFCItems.steelUses + 250);
 		
 		// Setup magic tool heads
 		TechnofirmaCore.ThaumicSteelAxeHead = new ItemTechnofirmaToolHead().SetIconTexture("technofirma:Thaumic Steel Axe Head").setUnlocalizedName("Thaumic Steel Axe Head");
@@ -102,13 +102,13 @@ public class CommonProxy
 	
 	public void RegisterRecipes()
 	{
-		GameRegistry.addRecipe(new ItemStack(TechnofirmaCore.ThaumicSteelAxe, 1), new Object[] { "#", "%", Character.valueOf('#'), new ItemStack(TechnofirmaCore.ThaumicSteelAxeHead, 1), Character.valueOf('%'), new ItemStack(TFCItems.Stick, 1)});
-		GameRegistry.addRecipe(new ItemStack(TechnofirmaCore.ThaumicSteelShovel, 1), new Object[] { "#", "%", Character.valueOf('#'), new ItemStack(TechnofirmaCore.ThaumicSteelShovelHead, 1), Character.valueOf('%'), new ItemStack(TFCItems.Stick, 1)});
-		GameRegistry.addRecipe(new ItemStack(TechnofirmaCore.ThaumicSteelPickaxe, 1), new Object[] { "#", "%", Character.valueOf('#'), new ItemStack(TechnofirmaCore.ThaumicSteelPickaxeHead, 1), Character.valueOf('%'), new ItemStack(TFCItems.Stick, 1)});
-		GameRegistry.addRecipe(new ItemStack(TechnofirmaCore.ThaumicSteelHoe, 1), new Object[] { "#", "%", Character.valueOf('#'), new ItemStack(TechnofirmaCore.ThaumicSteelHoeHead, 1), Character.valueOf('%'), new ItemStack(TFCItems.Stick, 1)});
-		GameRegistry.addRecipe(new ItemStack(TechnofirmaCore.ThaumicSteelSword, 1), new Object[] { "#", "%", Character.valueOf('#'), new ItemStack(TechnofirmaCore.ThaumicSteelSwordHead, 1), Character.valueOf('%'), new ItemStack(TFCItems.Stick, 1)});
+		GameRegistry.addRecipe(new ItemStack(TechnofirmaCore.ThaumicSteelAxe, 1), new Object[] { "#", "%", Character.valueOf('#'), new ItemStack(TechnofirmaCore.ThaumicSteelAxeHead, 1), Character.valueOf('%'), new ItemStack(TFCItems.stick, 1)});
+		GameRegistry.addRecipe(new ItemStack(TechnofirmaCore.ThaumicSteelShovel, 1), new Object[] { "#", "%", Character.valueOf('#'), new ItemStack(TechnofirmaCore.ThaumicSteelShovelHead, 1), Character.valueOf('%'), new ItemStack(TFCItems.stick, 1)});
+		GameRegistry.addRecipe(new ItemStack(TechnofirmaCore.ThaumicSteelPickaxe, 1), new Object[] { "#", "%", Character.valueOf('#'), new ItemStack(TechnofirmaCore.ThaumicSteelPickaxeHead, 1), Character.valueOf('%'), new ItemStack(TFCItems.stick, 1)});
+		GameRegistry.addRecipe(new ItemStack(TechnofirmaCore.ThaumicSteelHoe, 1), new Object[] { "#", "%", Character.valueOf('#'), new ItemStack(TechnofirmaCore.ThaumicSteelHoeHead, 1), Character.valueOf('%'), new ItemStack(TFCItems.stick, 1)});
+		GameRegistry.addRecipe(new ItemStack(TechnofirmaCore.ThaumicSteelSword, 1), new Object[] { "#", "%", Character.valueOf('#'), new ItemStack(TechnofirmaCore.ThaumicSteelSwordHead, 1), Character.valueOf('%'), new ItemStack(TFCItems.stick, 1)});
 	
-		GameRegistry.addShapelessRecipe(new ItemStack(TechnofirmaCore.ThaumicSteelIngot, 1), new Object[] { ItemApi.getItem("itemResource", 2), new ItemStack(TFCItems.SteelIngot, 1) });
+		GameRegistry.addShapelessRecipe(new ItemStack(TechnofirmaCore.ThaumicSteelIngot, 1), new Object[] { ItemApi.getItem("itemResource", 2), new ItemStack(TFCItems.steelIngot, 1) });
 
 		GameRegistry.addRecipe(new ItemStack(TechnofirmaCore.ThaumicAnvil, 1), new Object[] { "   ", "   ", "###", Character.valueOf('#'), ItemApi.getBlock("blockCosmeticSolid", 4)});
 	}
@@ -186,10 +186,10 @@ public class CommonProxy
 		AnvilManager anvilmgr = AnvilManager.getInstance();
 		
 		// Prospecting Focus
-		anvilmgr.addRecipe(new AnvilRecipe(new ItemStack(TFCItems.SteelIngot2x), null, "pro_focus", 70, false, AnvilReq.STEEL.ordinal(), new ItemStack(TechnofirmaCore.ProspectingFocus, 1)).addRecipeSkill(Global.SKILL_TOOLSMITH));
+		anvilmgr.addRecipe(new AnvilRecipe(new ItemStack(TFCItems.steelIngot2x), null, "pro_focus", 70, false, AnvilReq.STEEL.ordinal(), new ItemStack(TechnofirmaCore.ProspectingFocus, 1)).addRecipeSkill(Global.SKILL_TOOLSMITH));
 		
 		// Iron Wand Cap
-		anvilmgr.addRecipe(new AnvilRecipe(new ItemStack(TFCItems.WroughtIronIngot), null, "iron_wand_cap", 70, false, AnvilReq.WROUGHTIRON.ordinal(), ItemApi.getItem("itemWandCap", 0)).addRecipeSkill(Global.SKILL_TOOLSMITH));
+		anvilmgr.addRecipe(new AnvilRecipe(new ItemStack(TFCItems.wroughtIronIngot), null, "iron_wand_cap", 70, false, AnvilReq.WROUGHTIRON.ordinal(), ItemApi.getItem("itemWandCap", 0)).addRecipeSkill(Global.SKILL_TOOLSMITH));
 	}
 		
 	public void RegisterMagicAnvilPlans()
@@ -220,11 +220,11 @@ public class CommonProxy
 		anvilmgr.addPlan("gold_wand_cap", new MagicPlanRecipe("CAP_gold", alist, new RuleEnum[]{RuleEnum.PUNCHLAST, RuleEnum.PUNCHSECONDFROMLAST, RuleEnum.BENDTHIRDFROMLAST}));
 		
 		alist = new AspectList();	
-		anvilmgr.addPlan("thaumiumaxe", new MagicPlanRecipe("ASPECTS", alist, new RuleEnum[]{RuleEnum.PUNCHLAST, RuleEnum.HITSECONDFROMLAST, RuleEnum.UPSETTHIRDFROMLAST}));
-		anvilmgr.addPlan("thaumiumshovel", new MagicPlanRecipe("ASPECTS", alist, new RuleEnum[]{RuleEnum.PUNCHLAST, RuleEnum.HITNOTLAST, RuleEnum.ANY}));
-		anvilmgr.addPlan("thaumiumpickaxe", new MagicPlanRecipe("ASPECTS", alist, new RuleEnum[]{RuleEnum.PUNCHLAST, RuleEnum.BENDNOTLAST, RuleEnum.DRAWNOTLAST}));
-		anvilmgr.addPlan("thaumiumhoe", new MagicPlanRecipe("ASPECTS", alist, new RuleEnum[]{RuleEnum.PUNCHLAST, RuleEnum.HITNOTLAST, RuleEnum.BENDNOTLAST}));
-		anvilmgr.addPlan("thaumiumsword", new MagicPlanRecipe("ASPECTS", alist, new RuleEnum[]{RuleEnum.HITLAST, RuleEnum.BENDSECONDFROMLAST, RuleEnum.BENDTHIRDFROMLAST}));
+		anvilmgr.addPlan("thaumiumaxe", new MagicPlanRecipe("aspect.", alist, new RuleEnum[]{RuleEnum.PUNCHLAST, RuleEnum.HITSECONDFROMLAST, RuleEnum.UPSETTHIRDFROMLAST}));
+		anvilmgr.addPlan("thaumiumshovel", new MagicPlanRecipe("aspect.", alist, new RuleEnum[]{RuleEnum.PUNCHLAST, RuleEnum.HITNOTLAST, RuleEnum.ANY}));
+		anvilmgr.addPlan("thaumiumpickaxe", new MagicPlanRecipe("aspect.", alist, new RuleEnum[]{RuleEnum.PUNCHLAST, RuleEnum.BENDNOTLAST, RuleEnum.DRAWNOTLAST}));
+		anvilmgr.addPlan("thaumiumhoe", new MagicPlanRecipe("aspect.", alist, new RuleEnum[]{RuleEnum.PUNCHLAST, RuleEnum.HITNOTLAST, RuleEnum.BENDNOTLAST}));
+		anvilmgr.addPlan("thaumiumsword", new MagicPlanRecipe("aspect.", alist, new RuleEnum[]{RuleEnum.HITLAST, RuleEnum.BENDSECONDFROMLAST, RuleEnum.BENDTHIRDFROMLAST}));
 	}
 	
 	public void RegisterMagicAnvilRecipes()
@@ -233,9 +233,9 @@ public class CommonProxy
 		MagicAnvilManager anvilmgr = MagicAnvilManager.getInstance();
 						
 		// Register our anvil recipes
-		anvilmgr.addRecipe(new MagicAnvilRecipe(new ItemStack(TFCItems.CopperIngot), null, "copper_wand_cap", ItemApi.getItem("itemWandCap", 3)).addRecipeSkill(Global.SKILL_TOOLSMITH));
-		anvilmgr.addRecipe(new MagicAnvilRecipe(new ItemStack(TFCItems.SilverIngot), null, "silver_wand_cap", ItemApi.getItem("itemWandCap", 5)).addRecipeSkill(Global.SKILL_TOOLSMITH));
-		anvilmgr.addRecipe(new MagicAnvilRecipe(new ItemStack(TFCItems.GoldIngot), null, "gold_wand_cap", ItemApi.getItem("itemWandCap", 1)).addRecipeSkill(Global.SKILL_TOOLSMITH));
+		anvilmgr.addRecipe(new MagicAnvilRecipe(new ItemStack(TFCItems.copperIngot), null, "copper_wand_cap", ItemApi.getItem("itemWandCap", 3)).addRecipeSkill(Global.SKILL_TOOLSMITH));
+		anvilmgr.addRecipe(new MagicAnvilRecipe(new ItemStack(TFCItems.silverIngot), null, "silver_wand_cap", ItemApi.getItem("itemWandCap", 5)).addRecipeSkill(Global.SKILL_TOOLSMITH));
+		anvilmgr.addRecipe(new MagicAnvilRecipe(new ItemStack(TFCItems.goldIngot), null, "gold_wand_cap", ItemApi.getItem("itemWandCap", 1)).addRecipeSkill(Global.SKILL_TOOLSMITH));
 	
 		anvilmgr.addRecipe(new MagicAnvilRecipe(new ItemStack(TechnofirmaCore.ThaumicSteelIngot), null, "thaumiumaxe", new ItemStack(TechnofirmaCore.ThaumicSteelAxeHead, 1)).addRecipeSkill(Global.SKILL_TOOLSMITH));
 		anvilmgr.addRecipe(new MagicAnvilRecipe(new ItemStack(TechnofirmaCore.ThaumicSteelIngot), null, "thaumiumshovel", new ItemStack(TechnofirmaCore.ThaumicSteelShovelHead, 1)).addRecipeSkill(Global.SKILL_TOOLSMITH));

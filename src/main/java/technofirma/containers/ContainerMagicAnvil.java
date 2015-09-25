@@ -87,7 +87,7 @@ public class ContainerMagicAnvil extends ContainerTFC
 				if(!this.mergeItemStack(slotStack, 7, inventorySlots.size(), false))
 					return null;
 			}
-			else if(slotStack.getItem() == TFCItems.Powder && slotStack.getItemDamage() == 0)
+			else if(slotStack.getItem() == TFCItems.powder && slotStack.getItemDamage() == 0)
 			{
 				if (!this.mergeItemStack(slotStack, 6, 7, false))
 					return null;

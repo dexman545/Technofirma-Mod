@@ -121,7 +121,7 @@ public class TEMagicAnvil extends NetworkTileEntity implements IInventory
 					if(!eventCraft.isCanceled() && canpreform)
 					{						
 						//Set the item temp if possible
-						TFC_ItemHeat.SetTemp(eventCraft.result, TFC_ItemHeat.GetTemp(anvilItemStacks[INPUT1_SLOT]));
+						TFC_ItemHeat.setTemp(eventCraft.result, TFC_ItemHeat.getTemp(anvilItemStacks[INPUT1_SLOT]));
 
 						this.setInventorySlotContents(INPUT1_SLOT, eventCraft.result);
 						worldObj.playSoundEffect(xCoord,yCoord,zCoord, "thaumcraft:wand", 0.6f, 0.6f);
@@ -496,7 +496,7 @@ public class TEMagicAnvil extends NetworkTileEntity implements IInventory
 
 				if(result != null)
 				{
-					TFC_ItemHeat.SetTemp(result, (TFC_ItemHeat.GetTemp(anvilItemStacks[2]) + TFC_ItemHeat.GetTemp(anvilItemStacks[3])) / 2);
+					TFC_ItemHeat.setTemp(result, (TFC_ItemHeat.getTemp(anvilItemStacks[2]) + TFC_ItemHeat.getTemp(anvilItemStacks[3])) / 2);
 					if(result.stackSize <= 0)
 						result.stackSize = 1;
 					setInventorySlotContents(WELDOUT_SLOT, result);
@@ -656,12 +656,12 @@ public class TEMagicAnvil extends NetworkTileEntity implements IInventory
 	public Boolean isTemperatureWeldable(int i)
 	{
 		HeatRegistry manager = HeatRegistry.getInstance();
-		if(TFC_ItemHeat.HasTemp(anvilItemStacks[i]))
+		if(TFC_ItemHeat.hasTemp(anvilItemStacks[i]))
 		{
 			HeatIndex index = manager.findMatchingIndex(anvilItemStacks[i]);
 			if(index != null)
 			{
-				float temp = TFC_ItemHeat.GetTemp(anvilItemStacks[i]);
+				float temp = TFC_ItemHeat.getTemp(anvilItemStacks[i]);
 				return temp < index.meltTemp && temp > index.meltTemp - index.meltTemp * 0.20 && 
 						(anvilItemStacks[i].getItem() instanceof ItemMeltedMetal ? anvilItemStacks[i].getItemDamage() == 0 : true);
 			}
@@ -673,12 +673,12 @@ public class TEMagicAnvil extends NetworkTileEntity implements IInventory
 	{
 
 		HeatRegistry manager = HeatRegistry.getInstance();
-		if(TFC_ItemHeat.HasTemp(anvilItemStacks[i]))
+		if(TFC_ItemHeat.hasTemp(anvilItemStacks[i]))
 		{
 			HeatIndex index = manager.findMatchingIndex(anvilItemStacks[i]);
 			if(index != null)
 			{
-				float temp = TFC_ItemHeat.GetTemp(anvilItemStacks[i]);
+				float temp = TFC_ItemHeat.getTemp(anvilItemStacks[i]);
 				return temp < index.meltTemp && temp > index.meltTemp - index.meltTemp * 0.40 && 
 						(anvilItemStacks[i].getItem() instanceof ItemMeltedMetal ? anvilItemStacks[i].getItemDamage() == 0 : true);
 			}
@@ -856,7 +856,7 @@ public class TEMagicAnvil extends NetworkTileEntity implements IInventory
 		{
 			if(!worldObj.isRemote)
 			{
-				this.lastWorker = worldObj.getPlayerEntityByName(nbt.getString("playername"));
+				this.lastWorker = worldObj.getPlayerEntityByName(nbt.getString("playerName"));
 				this.lastWorker.openGui(TechnofirmaCore.instance, 0, worldObj, xCoord, yCoord, zCoord);
 				setPlan(nbt.getString("plan"));
 			}
@@ -896,7 +896,7 @@ public class TEMagicAnvil extends NetworkTileEntity implements IInventory
 	{
 		NBTTagCompound nbt = new NBTTagCompound();
 		nbt.setInteger("action", i);
-		nbt.setString("playername", PlayerManagerTFC.getInstance().getClientPlayer().Name);
+		nbt.setString("playerName", PlayerManagerTFC.getInstance().getClientPlayer().playerName);
 		this.broadcastPacketInRange(this.createDataPacket(nbt));
 	}
 
@@ -906,7 +906,7 @@ public class TEMagicAnvil extends NetworkTileEntity implements IInventory
 		NBTTagCompound nbt = new NBTTagCompound();
 		nbt.setInteger("action", 8);
 		nbt.setString("plan", plan);
-		nbt.setString("playername", PlayerManagerTFC.getInstance().getClientPlayer().Name);
+		nbt.setString("playername", PlayerManagerTFC.getInstance().getClientPlayer().playerName);
 		this.broadcastPacketInRange(this.createDataPacket(nbt));
 	}
 
